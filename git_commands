@@ -1,0 +1,15 @@
+1)download and move to home dir :https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+2)download and move to home dir :https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
+3)Download and move to home dir as .bash_profile(.bashrc for linux): https://www.udacity.com/api/nodes/3341718587/supplemental_media/bash-profile-course/download?_ga=1.37232743.672083044.1467344711
+
+
+To start editor from terminal:
+add this line in your terminal(for sublime for other text editor it may change) : alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+
+
+Other Config:
+git config --global core.editor "'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl' -n -w"(for subline ,for other text editor it may change)
+git config --global push.default upstream
+git config --global merge.conflictstyle diff3
+
+restart the terminal
