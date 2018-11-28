@@ -96,6 +96,32 @@ git tag -a v1.4 -m "my version 1.4"
 lightwaight tag : pointer reffer to commit snapshot.
 git tag v1.4-lw
 
+git show v1.4-lw
+show commit details before tag created.
+
+git tag -a v1.2 9fceb02
+to tag to specific commit, in case you forget to tag.
+
+By default, the git push command doesn’t transfer tags to remote servers. You will have to explicitly push tags to a shared server after you have created them
+
+git push origin <tagname>
+
+git push origin --tags
+This will transfer all of your tags to the remote server that are not already there.
+
+$ git tag -d v1.4-lw
+to delete the tag.
+
+
+git checkout 2.0.0
+to checkout the tags.
+your repository in “detached HEAD” state, In “detached HEAD” state, if you make changes and then create a commit, the tag will stay the same, but your new commit won’t belong to any branch and will be unreachable.
+say you’re fixing a bug on an older version, for instance 
+$ git checkout -b version2 v2.0.0
+Switched to a new branch 'version2'
+
+your branch will be different that tag.
+=================================================================================
 
 
 
