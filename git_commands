@@ -62,6 +62,42 @@ unstage a staged file.
 ==================================================================================
 git checkout -- <file>
 checkout the last commited version of file.all changes you have made gets reverted.
+==================================================================================
+git remote
+list all the remotes available
+
+git remote -v
+list all the remotes available with verbose.
+
+git remote add <name> <url>
+this command will add new remote explicitly.
+==================================================================================
+git push <remote> <branch>
+
+git push origin master
+
+If you want to push your master branch to your origin server 
+then you can run this to push any commits you’ve done back up to the server
+==================================================================================
+git remote show <remote>
+
+get information about remote.
+
+=================================================================================
+git remote rename pb paul
+rename remote form pb to paul
+
+git remote remove paul
+remove remote paul
+=================================================================================
+annotated tag : more description
+git tag -a v1.4 -m "my version 1.4"
+
+lightwaight tag : pointer reffer to commit snapshot.
+git tag v1.4-lw
+
+
+
 
 
 
