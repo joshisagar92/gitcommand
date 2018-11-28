@@ -122,8 +122,9 @@ Switched to a new branch 'version2'
 
 your branch will be different that tag.
 =================================================================================
-git log --oneline --decorate --graph --all 
-to show commit graph
+$ git checkout -b iss53
+create and checkout a branch.
+=================================================================================
 
 
 
