@@ -1,2 +1,3 @@
 git config --global core.askpass  (fatal: could not read password for URL)
+git config --global core.editor   (Set editor to type commit message)
 

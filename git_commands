@@ -1,15 +1,69 @@
-1)download and move to home dir :https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
-2)download and move to home dir :https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
-3)Download and move to home dir as .bash_profile(.bashrc for linux): https://www.udacity.com/api/nodes/3341718587/supplemental_media/bash-profile-course/download?_ga=1.37232743.672083044.1467344711
+While the git status output is pretty comprehensive. Git also has a short status flag so you can see your changes in a more compact way.
+
+	git status -s or git status --short 
+
+============================================================================
+git diff
+To see what you’ve changed but not yet staged, type git diff with no other arguments.
+command compares what is in your working directory with what is in your staging area.
+
+diff --staged or --cached
+If you want to see what you’ve staged that will go into your next commit, you can use git this command. This command compares your staged changes to your last commit.
+===============================================================================
+
+git commit 
+ Simplest way to commit your change from staging area.
+git commit -v
+you can pass the -v option to git commit. Doing so also puts the diff of your change in the editor so you can see exactly what changes you’re committing.
+git commit -a
+Makes Git automatically stage every file that is already tracked before doing the commit, letting you skip the git add part
+
+==================================================================================
+git rm
+
+remove file only from staging area. can not remove untracked file.
+
+git rm -f <file> : remove and delete the file from disk.
+git rm -cached <file> : remove from git stage area but exist on disk(remain as untracked file and we can put it in gitignore).
+===================================================================================
+git mv file_from file_to
+
+This is more like rename commad.
+===================================================================================
+git log
+
+to view commit history.
+
+git log -p or --patch
+which shows the difference (the patch output) introduced in each commit
+
+git log -2
+limit the history to 2.
+
+git log -stat
+if you want to see some abbreviated stats for each commit
+
+$ git log --pretty=oneline,short, full, and fuller
+pretty have a four options.
+change the log output than default.
+===================================================================================
+git commit --amend
+
+This command takes your staging area and uses it for the commit. If you’ve made no changes since your last commit (for instance, you run this command immediately after your previous commit), then your snapshot will look exactly the same, and all you’ll change is your commit message.
+
+if you commit and then realize you forgot to stage the changes in a file you wanted to add to this commit, you can do something like this:
+
+$ git commit -m 'initial commit'
+$ git add forgotten_file
+$ git commit --amend
+==================================================================================
+git reset HEAD <file>
+unstage a staged file.
+==================================================================================
+git checkout -- <file>
+checkout the last commited version of file.all changes you have made gets reverted.
 
 
-To start editor from terminal:
-add this line in your terminal(for sublime for other text editor it may change) : alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 
-Other Config:
-git config --global core.editor "'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl' -n -w"(for subline ,for other text editor it may change)
-git config --global push.default upstream
-git config --global merge.conflictstyle diff3
 
-restart the terminal.
