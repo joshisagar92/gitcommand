@@ -1,4 +1,6 @@
 *****************HEADING ************************
+*****************HEADING ************************
+*****************HEADING ************************
 git config --global core.askpass  (fatal: could not read password for URL)
 git config --global core.editor   (Set editor to type commit message)
 $ git config --global alias.co checkout (give an alias to checkout command.)
